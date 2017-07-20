@@ -292,6 +292,7 @@
     <Compile Include="OtherInfo\OtherInfo.xaml.cs">
       <DependentUpon>OtherInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IVersionGet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
