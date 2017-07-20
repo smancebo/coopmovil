@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" xmlns:controls="clr-namespace:ibanking.Controls" 
+    Title="{i18n:Translate L_SELECCIONE_CUENTA}" 
+    x:Class="ibanking.Utils.ChooseAccount">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="20, 40, 20,20" Android="10, 20, 10, 20"></OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+              <!--  <controls:IconLabel Text="" VerticalOptions="Center">
+                </controls:IconLabel>
+                <Entry HorizontalOptions="FillAndExpand" Placeholder="{i18n:Translate L_BUSCAR}"></Entry>
+-->
+                <SearchBar x:Name="searchBar" Placeholder="{i18n:Translate L_BUSCAR}" TextChanged="OnSearchBar_TextChanged" HorizontalOptions="FillAndExpand">
+                </SearchBar>
+            </StackLayout>
+            <ListView x:Name="lstCuentas" RowHeight="140" ItemSelected="lstCuentas_ItemSelected" ItemsSource="{Binding Items}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                                <Label Text="{Binding DESCRIPCION}" Style="{DynamicResource head-label}">
+                                </Label>
+                                <Label Text="{Binding TITULAR}" Style="{DynamicResource head-label}">
+                                </Label>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Label Text="{i18n:Translate L_CUENTA}" HorizontalOptions="FillAndExpand">
+                                    </Label>
+                                    <Label Text="{Binding IDCUENTA}" Style="{DynamicResource head-label}">
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Label Text="{i18n:Translate L_BALANCE}" HorizontalOptions="FillAndExpand">
+                                    </Label>
+                                    <Label Text="{Binding BALANCE, StringFormat='{0:C}'}" Style="{DynamicResource amount-label}">
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ibanking.Controls;assembly=ibanking"
+    xmlns:strings="clr-namespace:ibanking.Strings;assembly=ibanking"
+    xmlns:i18n="clr-namespace:ibanking"
+    Title="{i18n:Translate APP_NAME}"
+    x:Class="ibanking.CoopInfo">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="10, 40, 10, 20" Android="10, 20, 10, 20">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+ 
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            
+        
+            <StackLayout HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+
+                Orientation="Vertical" x:Name="main">
+               
+                <Label x:Name="LabelFecha"></Label>
+
+                <Grid VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image x:Name="ImageLogo" Grid.Row="0" HorizontalOptions="FillAndExpand" Aspect="AspectFit" VerticalOptions="Fill"></Image>
+                        <Image x:Name="ImageBanner" Grid.Row="1" HorizontalOptions="FillAndExpand" Aspect="Fill" VerticalOptions="Fill"></Image>
+                    </Grid>
+                   
+                   
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Grid.Row="1">
+                        <controls:CoopInfoBtn x:Name="ButtonAcceso" Text="{i18n:Translate L_ACCESO}"></controls:CoopInfoBtn>
+                        <controls:CoopInfoBtn x:Name="ButtonOtherInfo" Text="{i18n:Translate L_OTRAS_INFORMACIONES}" ></controls:CoopInfoBtn>
+                        <controls:CoopInfoBtn x:Name="ButtonConfig" Text="{i18n:Translate L_CONFIGURACION}"></controls:CoopInfoBtn>
+
+                    </StackLayout>
+                </Grid>
+                
+               
+               
+               
+            </StackLayout>
+        </ScrollView>
+	</ContentPage.Content>
+</ContentPage>

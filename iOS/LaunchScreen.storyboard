@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view contentMode="scaleToFill" id="17" key="view">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="35" translatesAutoresizingMaskIntoConstraints="NO" image="splash.png" misplaced="YES">
+                                <rect key="frame" x="16" y="16" width="568" height="584"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                        <constraints>
+                            <constraint id="38" firstItem="35" firstAttribute="trailing" secondItem="17" secondAttribute="trailingMargin"/>
+                            <constraint id="39" firstItem="35" firstAttribute="leading" secondItem="17" secondAttribute="leadingMargin"/>
+                            <constraint id="40" firstItem="35" firstAttribute="bottom" secondItem="17" secondAttribute="bottom"/>
+                            <constraint id="41" firstItem="Llm-lL-Icb" firstAttribute="bottom" secondItem="35" secondAttribute="top" constant="4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <containerView contentMode="scaleToFill" id="10" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="257" y="506" width="240" height="128"/>
+                    <connections>
+                        <segue destination="12" kind="embed" id="11"/>
+                    </connections>
+                </containerView>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+        <scene sceneID="13">
+            <objects>
+                <viewController id="12" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8"/>
+                        <viewControllerLayoutGuide type="bottom" id="9"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="14">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash.png" width="2208" height="2208"/>
+        <image name="hamburguer.png" width="30" height="30"/>
+        <image name="AppIcon.png" width="512" height="512"/>
+    </resources>
+</document>

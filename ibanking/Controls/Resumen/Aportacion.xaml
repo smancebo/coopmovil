@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    HorizontalOptions="FillAndExpand" VerticalOptions="Start" 
+
+    xmlns:cs="clr-namespace:ibanking.Controls;assembly=ibanking" 
+    xmlns:i18n="clr-namespace:ibanking"
+    x:Class="ibanking.Controls.Resumen.Aportacion">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+        <ColumnDefinition Width="4*">
+        </ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*">
+        </RowDefinition>
+        <RowDefinition Height="1">
+        </RowDefinition>
+    </Grid.RowDefinitions>
+    <cs:IconLabel Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" 
+    VerticalOptions="Center"  Style="{DynamicResource icon-container}"></cs:IconLabel>
+    <StackLayout Padding="0, 0, 15, 0" x:Name="cuentaContext" Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
+        <Label x:Name="lblDescripcion" 
+        Style="{DynamicResource head-label}">CUENTA DE AHORRO</Label>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" 
+            Orientation="Horizontal">
+            <Label HorizontalOptions="FillAndExpand" Text="{i18n:Translate L_APORTACION}"></Label>
+            <Label HorizontalOptions="Fill" x:Name="lblAportacion" 
+            Style="{DynamicResource head-label}" Text="{Binding IDCuenta}">12345</Label>
+        </StackLayout>
+      
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" 
+            Orientation="Horizontal">
+            <Label HorizontalOptions="FillAndExpand" Text="{i18n:Translate L_BALANCE}"></Label>
+            <Label HorizontalOptions="Fill" x:Name="lblBalance" 
+            Style="{DynamicResource amount-label}" Text="{Binding Balance_Actual, StringFormat='{2:N}'}">12345.00</Label>
+        </StackLayout>
+    </StackLayout>
+    <BoxView BackgroundColor="#ddd" Grid.Row="1" Grid.ColumnSpan="2"></BoxView>
+    
+</Grid>

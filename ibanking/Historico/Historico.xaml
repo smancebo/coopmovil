@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" xmlns:controls="clr-namespace:ibanking.Controls" Title="{i18n:Translate L_HISTORICO}" BackgroundColor="#fafafa" x:Class="ibanking.Historico.Historico">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 0, 0, 20" Android="10, 20, 10, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ContentView>
+            <OnPlatform x:TypeArguments="View">
+                <OnPlatform.iOS>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <ScrollView>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <TableView Intent="Form" x:Name="Form">
+                                    <TableSection Title="{i18n:Translate L_HISTORICO}">
+                                        <ViewCell Tapped="Cuentas_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="4*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_CUENTA}">
+                                                        </Label>
+                                                        <ScrollView x:Name="scrollCuentas" Orientation="Horizontal" Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+                                                            <Label x:Name="lblCuenta" Style="{DynamicResource content-details-label}" HorizontalOptions="FillAndExpand" XAlign="End" Text="{i18n:Translate L_SELECCIONE_CUENTA}">
+                                                            </Label>
+                                                        </ScrollView>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                        <ViewCell Tapped="Transacciones_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" Padding="15, 10, 15, 10">
+                                                    <Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="2*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="4*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_TRANSACCIONES}" HorizontalOptions="FillAndExpand">
+                                                        </Label>
+                                                        <ScrollView x:Name="scrollTransacciones" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End">
+                                                            <Label  x:Name="lblTransaccion" Style="{DynamicResource content-details-label}" HorizontalOptions="FillAndExpand" XAlign="End" Text="{i18n:Translate L_SELECCIONE_TRANSACCION}">
+                                                            </Label>
+                                                        </ScrollView>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                        <SwitchCell Text="{i18n:Translate L_MOSTRAR_DETALLES}" x:Name="mostrar_detalle" OnChanged="Mostrar_detalle_changed">
+                                        </SwitchCell>
+                                        <SwitchCell Text="{i18n:Translate L_MOSTRAR_SOLO_TRANFERENCIAS}" x:Name="solo_transferencias" OnChanged="Solo_TX_OnChanged">
+                                        </SwitchCell>
+                                    </TableSection>
+                                    <TableSection Title="{i18n:Translate L_FECHA}">
+                                        <ViewCell Tapped="Open_Fecha_Desde">
+                                            <StackLayout Orientation="Horizontal" Padding="16, 10, 15, 10">
+                                                <Label Text="{i18n:Translate L_FECHA_DESDE}" HorizontalOptions="FillAndExpand">
+                                                </Label>
+                                                <Label x:Name="lblFechaDesde" Text="" TextColor="#4e6b4c">
+                                                </Label>
+                                                <DatePicker x:Name="txtFechaDesde" VerticalOptions="Center" Style="{DynamicResource content-details-date}" IsVisible="false" DateSelected="Fecha_Desde_Selected" Format="dd-MM-yyyy" HorizontalOptions="End">
+                                                </DatePicker>
+                                            </StackLayout>
+                                        </ViewCell>
+                                        <ViewCell Tapped="Open_Fecha_Hasta">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" Padding="16, 10, 15, 10">
+                                                    <Label Text="{i18n:Translate L_FECHA_HASTA}" HorizontalOptions="FillAndExpand">
+                                                    </Label>
+                                                    <Label x:Name="lblFechaHasta" Text="" TextColor="#4e6b4c">
+                                                    </Label>
+                                                    <DatePicker IsVisible="false" VerticalOptions="Center" Style="{DynamicResource content-details-date}"  DateSelected="Fecha_Hasta_Selected" x:Name="txtFechaHasta" Format="dd-MM-yyyy" HorizontalOptions="End">
+                                                    </DatePicker>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </TableSection>
+                                </TableView>
+                               
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </OnPlatform.iOS>
+                <OnPlatform.Android>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <ScrollView>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="10, 10, 10, 20" BackgroundColor="White">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_CUENTA}"></Label>
+                                    <controls:CustomEntry Text="{Binding vm.Cuenta.NOMBRE_PUBLICO}" Placeholder="{i18n:Translate L_SELECCIONE_CUENTA}" OnEntryTapped="Cuentas_Tapped" InputTransparent="true" HorizontalOptions="FillAndExpand" Style="{DynamicResource content-details-text}"></controls:CustomEntry>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_TRANSACCIONES}"></Label>
+                                    <controls:CustomEntry Text="{Binding vm.Transaccion.Descripcion}" OnEntryTapped="Transacciones_Tapped" InputTransparent="true" HorizontalOptions="FillAndExpand"  Style="{DynamicResource content-details-text}"></controls:CustomEntry>
+                                </StackLayout>
+                                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_MOSTRAR_DETALLES}" HorizontalOptions="FillAndExpand"></Label>
+                                    <Switch IsToggled="{Binding vm.Mostrar_Detalle}"></Switch>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_MOSTRAR_SOLO_TRANFERENCIAS}" HorizontalOptions="FillAndExpand"></Label>
+                                    <Switch IsToggled="{Binding vm.Solo_Transferencias}"></Switch>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_FECHA_DESDE}"></Label>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <controls:IconLabel VerticalOptions="Center">&#xf073;</controls:IconLabel>
+                                        <DatePicker HorizontalOptions="FillAndExpand" Format="dd-MM-yyyy" Date="{Binding vm.Fecha_Desde}"></DatePicker>
+                                    </StackLayout>
+                                </StackLayout>
+                                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_FECHA_HASTA}" ></Label>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <controls:IconLabel VerticalOptions="Center">&#xf073;</controls:IconLabel>
+                                        <DatePicker HorizontalOptions="FillAndExpand" Format="dd-MM-yyyy" Date="{Binding vm.Fecha_Hasta}"></DatePicker>
+                                    </StackLayout>
+                                </StackLayout>
+                                 <Button x:Name="btnBuscar" TextColor="White" BackgroundColor="#00695c" Text="{i18n:Translate L_BUSCAR}" Clicked="Buscar_Clicked">
+                                </Button>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </OnPlatform.Android>
+            </OnPlatform>
+        </ContentView>
+    </ContentPage.Content>
+</ContentPage>

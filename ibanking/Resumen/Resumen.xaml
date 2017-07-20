@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+    x:Class="ibanking.Resumen.Resumen">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
+            <StackLayout Padding="10" HorizontalOptions="FillAndExpand"  VerticalOptions="Fill" BackgroundColor="#e8e8e8" Orientation="Vertical">
+                <Label x:Name="lblFechaProceso" HorizontalOptions="Center" BackgroundColor="#e8e8e8" LineBreakMode="WordWrap" MinimumWidthRequest="20"></Label>
+            </StackLayout>
+            <controls:PullToRefreshLayout x:Name="pullToRefresh" IsRefreshing="{Binding IsRefreshing}">
+                 <ScrollView x:Name='scrollResumen'>
+                    <StackLayout x:Name="lstResumen" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    </StackLayout>
+                </ScrollView>
+            </controls:PullToRefreshLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

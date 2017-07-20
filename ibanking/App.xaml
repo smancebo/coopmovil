@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ibanking.App">
+	<Application.Resources>
+		<!-- Application resource dictionary -->
+
+        <ResourceDictionary>
+
+
+            <Color x:Key="textColor">#fff</Color>
+            <Color x:Key="backGroundColor">#00695C</Color>
+            
+            
+            <Style x:Key="primaryButton" TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource textColor}"></Setter>
+                <Setter Property="BackgroundColor" Value="{DynamicResource backGroundColor}"></Setter>
+               
+            </Style>
+
+             <Style x:Key="CoopinfoButton" TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource textColor}"></Setter>
+                <Setter Property="BackgroundColor" Value="{DynamicResource backGroundColor}"></Setter>
+            </Style>
+
+            <Style x:Key="amount-label" TargetType="Label">
+                <Setter Property="TextColor" Value="#28ae60"></Setter>
+            </Style>
+
+            <Style x:Key="amount-red-label" TargetType="Label">
+                <Setter Property="TextColor" Value="#c0392b"></Setter>
+            </Style>
+            
+            <Style x:Key="head-label" TargetType="Label">
+                <Setter Property="TextColor" Value="#4e6b4c"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+
+            <Style x:Key="icon-container" TargetType="Label">
+                <Setter Property="TextColor" Value="#34495E"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
+            </Style>
+
+            <Style x:Key="content-details-text" TargetType="Entry">
+                <Setter Property="TextColor" Value="#4E6B4C"></Setter>
+                <Setter Property="FontSize" Value="12"></Setter>
+            </Style>
+
+              <Style x:Key="content-details-date" TargetType="DatePicker">
+                <Setter Property="TextColor" Value="#4E6B4C"></Setter>
+              
+            </Style>
+
+            
+            <Style x:Key="content-details-label" TargetType="Label">
+                <Setter Property="TextColor" Value="#4E6B4C"></Setter>
+                <Setter Property="FontSize" Value="12"></Setter>
+            </Style>
+            <Style x:Key="content-details-text-red" TargetType="Entry">
+                <Setter Property="TextColor" Value="#C24133"></Setter>
+                <Setter Property="FontSize" Value="12"></Setter>
+            </Style>
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>

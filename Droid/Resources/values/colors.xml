@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <item name="primary" type="color">#00695C</item>
+    <item name="primaryDark" type="color">#004D40</item>
+	<item name="ListViewSelector" type="color">#e2e2e2</item>
+</resources>

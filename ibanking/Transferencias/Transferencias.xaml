@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" xmlns:controls="clr-namespace:ibanking.Controls" BackgroundColor="#fafafa" x:Class="ibanking.Transferencias.Transferencias">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" Android="10, 0, 10, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ContentView>
+            <OnPlatform x:TypeArguments="View">
+                <OnPlatform.iOS>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <ScrollView>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <TableView Intent="Form">
+                                    <TableSection>
+                                        <ViewCell Tapped="CuentaOrigen_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width=".60*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_CUENTA_ORIGEN}">
+                                                        </Label>
+                                                        <ScrollView x:Name="scrollCuentaOrigen" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+                                                                <Label x:Name="lblCuentaOrigen" Text="{Binding vm.Cuenta_Origen.NOMBRE_PUBLICO}"  Style="{DynamicResource content-details-label}" HorizontalOptions="FillAndExpand">
+                                                                </Label>
+                                                                <!--<controls:CustomEntry Text="{Binding vm.Cuenta_Origen.NOMBRE_PUBLICO}"  InputTransparent="true" 
+                                                                    OnEntryTapped="CuentaOrigen_Tapped" 
+                                                                    Style="{DynamicResource content-details-text}"  
+                                                                    HorizontalTextAlignment="End" HorizontalOptions="FillAndExpand"  Placeholder="{i18n:Translate L_SELECCIONE_CUENTA}">
+                                                                </controls:CustomEntry>-->
+                                                            </StackLayout>
+                                                        </ScrollView>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Label Text="{i18n:Translate L_BALANCE}">
+                                                    </Label>
+                                                    <Label Style="{DynamicResource content-details-label}" VerticalOptions="Center" Text="{Binding vm.Cuenta_Origen.BALANCE, StringFormat='{0:C}'}" HorizontalOptions="FillAndExpand" XAlign="End">
+                                                    </Label>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                        <ViewCell Tapped="CuentaDestino_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width=".60*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_CUENTA_DESTINO}" HorizontalOptions="FillAndExpand">
+                                                        </Label>
+                                                        <ScrollView x:Name="scrollCuentaDestino" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+                                                                <Label x:Name="lblCuentaDestino"  Text="{Binding vm.Cuenta_Destino.NOMBRE_PUBLICO}" Style="{DynamicResource content-details-label}" HorizontalOptions="FillAndExpand">
+                                                                </Label>
+                                                            </StackLayout>
+                                                        </ScrollView>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Label Text="{i18n:Translate L_BALANCE}">
+                                                    </Label>
+                                                    <Label Style="{DynamicResource content-details-label}" VerticalOptions="Center" Text="{Binding vm.Cuenta_Destino.BALANCE, StringFormat='{0:C}'}" HorizontalOptions="FillAndExpand" XAlign="End">
+                                                    </Label>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                        <ViewCell Tapped="Monto_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_MONTO}">
+                                                        </Label>
+                                                        <controls:CustomEntry Text="{Binding vm.Monto, StringFormat='{0:C}'}" x:Name="txtMonto" Grid.Row="0" Grid.Column="1" Style="{DynamicResource content-details-text}" SelectAllOnFocus="true" Unfocused="Handle_Unfocused" HorizontalTextAlignment="End" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Placeholder="$0.00" Keyboard="Numeric">
+                                                        </controls:CustomEntry>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </TableSection>
+                                    <TableSection>
+                                        <ViewCell >
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <!--<Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_CONCEPTO}">
+                                                        </Label>-->
+                                                        <controls:CustomEntry Keyboard="Text" VerticalOptions="Center" Text="{Binding vm.Concepto}" Placeholder="{i18n:Translate L_CONCEPTO}"  Style="{DynamicResource content-details-text}" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand">
+                                                        </controls:CustomEntry>
+                                                    <!--</Grid>-->
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </TableSection>
+                                </TableView>
+
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </OnPlatform.iOS>
+                <OnPlatform.Android>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <ScrollView>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="10, 10, 10, 20" BackgroundColor="White">
+                                <StackLayout x:Name="btnCuentaOrigen" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_CUENTA_ORIGEN}">
+                                    </Label>
+                                    <controls:CustomEntry InputTransparent="true" OnEntryTapped="CuentaOrigen_Tapped" Text="{Binding vm.Cuenta_Origen.NOMBRE_PUBLICO}" HorizontalOptions="FillAndExpand" Placeholder="{i18n:Translate L_SELECCIONE_CUENTA}" Style="{DynamicResource content-details-text}">
+                                    </controls:CustomEntry>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_BALANCE}">
+                                    </Label>
+                                    <Entry InputTransparent="true" HorizontalOptions="FillAndExpand" Text="{Binding vm.Cuenta_Origen.BALANCE, StringFormat='{0:C}'}" Placeholder="0.00" PlaceholderColor="#4e6b4c" Style="{DynamicResource content-details-text}">
+                                    </Entry>
+                                </StackLayout>
+                                <StackLayout x:Name="btnCuentaDestino" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_CUENTA_DESTINO}">
+                                    </Label>
+                                    <controls:CustomEntry InputTransparent="true" Style="{DynamicResource content-details-text}" OnEntryTapped="CuentaDestino_Tapped" Text="{Binding vm.Cuenta_Destino.NOMBRE_PUBLICO}" HorizontalOptions="FillAndExpand" Placeholder="{i18n:Translate L_SELECCIONE_CUENTA}">
+                                    </controls:CustomEntry>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_BALANCE}">
+                                    </Label>
+                                    <Entry InputTransparent="true" Style="{DynamicResource content-details-text}" HorizontalOptions="FillAndExpand" Text="{Binding vm.Cuenta_Destino.BALANCE, StringFormat='{0:C}'}" Placeholder="0.00" PlaceholderColor="#4e6b4c">
+                                    </Entry>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_MONTO}">
+                                    </Label>
+                                    <controls:CustomEntry SelectAllOnFocus="true" Style="{DynamicResource content-details-text}" Keyboard="Numeric" Unfocused="Handle_Unfocused" Text="{Binding vm.Monto, StringFormat='{0:C}'}" HorizontalOptions="FillAndExpand" Placeholder="$0.00">
+                                    </controls:CustomEntry>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_CONCEPTO}">
+                                    </Label>
+                                    <Entry Keyboard="Text" Text="{Binding vm.Concepto}" Style="{DynamicResource content-details-text}" HorizontalOptions="FillAndExpand">
+                                    </Entry>
+                                </StackLayout>
+                                <Button Text="{i18n:Translate L_TRANSFERIR}" Clicked="Buscar_Clicked" BackgroundColor="#00695c" TextColor="White">
+                                </Button>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </OnPlatform.Android>
+            </OnPlatform>
+        </ContentView>
+    </ContentPage.Content>
+</ContentPage>

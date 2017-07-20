@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Ok">
+		<value>Aceptar</value>
+	</data>
+	<data name="noConnection">
+		<value>Sin conexion</value>
+	</data>
+	<data name="noConnectionError">
+		<value>Error de conexión. Asegúrese que su equipo esté conectado a internet</value>
+	</data>
+	<data name="AppName">
+		<value>Coopbueno Movil</value>
+	</data>
+	<data name="Acceso">
+		<value>Acceso</value>
+	</data>
+	<data name="OtherInfo">
+		<value>Otras Informaciones</value>
+	</data>
+	<data name="Config">
+		<value>Configuración</value>
+	</data>
+	<data name="UserName">
+		<value>Usuario</value>
+	</data>
+	<data name="Password">
+		<value>Contraseña</value>
+	</data>
+	<data name="Login">
+		<value>Login</value>
+	</data>
+	<data name="doLogin">
+		<value>Iniciar Sesión</value>
+	</data>
+	<data name="ErrorLogin">
+		<value>Usuario o Contraseña invalidos</value>
+	</data>
+	<data name="Error">
+		<value>Error</value>
+	</data>
+	<data name="RequiredUsernameAndPassword">
+		<value>Nombre de Usuario y contraseña son requeridos</value>
+	</data>
+	<data name="Cuenta">
+		<value>Cuenta</value>
+	</data>
+	<data name="Estatus">
+		<value>Estatus</value>
+	</data>
+	<data name="Disponible">
+		<value>Disponible</value>
+	</data>
+	<data name="Balance">
+		<value>Balance</value>
+	</data>
+
+	<data name="lblFechaProceso">
+        <value>Las informaciones estan actualizadas al </value>
+    </data>
+
+	<data name="CuentasAhorro">
+        <value>Cuentas de Ahorro</value>
+    </data>
+
+	<data name="Resumen">
+        <value>Resumen</value>
+    </data>
+
+	<data name="Prestamo">
+        <value>Préstamo</value>
+	</data>
+
+	<data name="Monto">
+        <value>Monto</value>
+	</data>
+
+	<data name="Vencido">
+        <value>Vencido</value>
+	</data>
+	<data name="Certificado">
+        <value>Certificado</value>
+	</data>
+	<data name="Prestamos">
+         <value>Préstamos</value>
+	</data>
+	<data name="Certificados">
+		<value>Certificados</value>
+    </data>
+	<data name="Aportacion">
+        <value>Aportación</value>
+    </data>
+	<data name="Aportaciones">
+        <value>Aportaciones</value>
+    </data>
+</root>

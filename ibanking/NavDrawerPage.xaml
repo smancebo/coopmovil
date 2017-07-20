@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:ibanking.Controls;assembly=ibanking"
+    x:Class="ibanking.NavDrawerPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage BackgroundColor="#e8e8e8" Title="Menu">
+            <ContentPage.Icon>
+                <OnPlatform x:TypeArguments='FileImageSource' iOS="hamburguer.png"></OnPlatform>
+            </ContentPage.Icon>
+
+            <StackLayout Orientation="Vertical"  BackgroundColor="#008584">
+
+                <StackLayout HeightRequest="75" BackgroundColor="#008080" Padding="20, 40, 20, 10" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Image Source="icon.png" HeightRequest="52" WidthRequest="52" HorizontalOptions="Fill"></Image>
+                    </StackLayout>
+                    <Label x:Name="lblCliente" TextColor="White" FontSize="12"></Label>
+                </StackLayout>
+
+                <ListView x:Name='navigationDrawerList'
+                    RowHeight="60"
+                    BackgroundColor="#008584"
+                    SeparatorVisibility="None"
+
+                    ItemSelected="OnMenuItemSelected">
+
+                 <!--   <ListView.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color" iOS="#00695C"></OnPlatform>
+                    </ListView.BackgroundColor>-->
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand"
+                                    Orientation="Horizontal"
+                                    Padding="20,10,0,10"
+                                    Spacing="20">
+                                    
+                                    <local:IconLabel TextColor="#fff" Text="{Binding Icon}" 
+                                    VerticalOptions="CenterAndExpand" FontSize="30">
+                                    </local:IconLabel>
+
+                                    <Label Text="{Binding Title}"
+                                        FontSize="Medium" 
+                                        TextColor="#fff"
+                                        VerticalOptions="Center">
+                                    </Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                </ListView>
+                
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage >
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
+
+

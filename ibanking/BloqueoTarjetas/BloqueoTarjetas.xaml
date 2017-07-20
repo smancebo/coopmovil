@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" xmlns:controls="clr-namespace:ibanking.Controls" 
+    Title="{i18n:Translate L_BLOQUEO_TARJETA}"
+    x:Class="ibanking.BloqueoTarjetas.BloqueoTarjetas">
+    <ContentPage.Content>
+        <ContentView>
+            <OnPlatform x:TypeArguments="View">
+                <OnPlatform.iOS>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <ScrollView>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <TableView Intent="Form">
+                                    <TableSection>
+                                        <ViewCell Tapped="Tarjetas_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width=".60*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_TARJETA}">
+                                                        </Label>
+                                                        <ScrollView x:Name="scrollTarjeta" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                                                <Label x:Name="lblTarjeta" Text="{Binding vm.Tarjeta.tarjetaEncriptada}" Style="{DynamicResource content-details-label}" HorizontalOptions="FillAndExpand">
+                                                                </Label>
+                                                            </StackLayout>
+                                                        </ScrollView>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                        <ViewCell Tapped="TiposBloqueo_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <Grid HorizontalOptions="FillAndExpand">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*">
+                                                            </RowDefinition>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width=".60*">
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="1*">
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Row="0" Grid.Column="0" Text="{i18n:Translate L_TIPO_BLOQUEO}" HorizontalOptions="FillAndExpand">
+                                                        </Label>
+                                                        <ScrollView x:Name="scrollTipoBloqueo" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                                                <Label x:Name="lblTipoBloqueo" Text="{Binding vm.Tipo_Bloqueo.T_TiposDeBloqueo_Descripcion}" Style="{DynamicResource content-details-label}" HorizontalOptions="FillAndExpand">
+                                                                </Label>
+                                                            </StackLayout>
+                                                        </ScrollView>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </TableSection>
+                                    <TableSection>
+                                        <ViewCell Tapped="Concepto_Tapped">
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="16, 10, 15, 10">
+                                                    <controls:CustomEntry x:Name="txtConcepto" Keyboard="Text" Text="{Binding vm.Concepto}" Placeholder="{i18n:Translate L_CONCEPTO}" Style="{DynamicResource content-details-text}" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand">
+                                                    </controls:CustomEntry>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </TableSection>
+                                </TableView>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </OnPlatform.iOS>
+                <OnPlatform.Android>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <ScrollView>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="10, 10, 10, 20" BackgroundColor="White">
+                                <StackLayout x:Name="btnCuentaOrigen" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_TARJETA}">
+                                    </Label>
+                                    <controls:CustomEntry InputTransparent="true" OnEntryTapped="Tarjetas_Tapped"  Text="{Binding vm.Tarjeta.tarjetaEncriptada}" HorizontalOptions="FillAndExpand" Placeholder="{i18n:Translate L_CHOOSE_CARD}">
+                                    </controls:CustomEntry>
+                                </StackLayout>
+
+                                <StackLayout x:Name="btnCuentaDestino" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_TIPO_BLOQUEO}">
+                                    </Label>
+                                    <controls:CustomEntry InputTransparent="true" OnEntryTapped="TiposBloqueo_Tapped"  Text="{Binding vm.Tipo_Bloqueo.T_TiposDeBloqueo_Descripcion}" HorizontalOptions="FillAndExpand" Placeholder="{i18n:Translate L_CHOOSE_BLOCK_TYPE}">
+                                    </controls:CustomEntry>
+                                </StackLayout>
+                               
+
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 10">
+                                    <Label Text="{i18n:Translate L_CONCEPTO}">
+                                    </Label>
+                                    <Entry Keyboard="Text" Text="{Binding vm.Concepto}" HorizontalOptions="FillAndExpand">
+                                    </Entry>
+                                </StackLayout>
+                                <Button Text="{i18n:Translate L_ACEPTAR}" Clicked="Buscar_Clicked"  BackgroundColor="#00695c" TextColor="White">
+                                </Button>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </OnPlatform.Android>
+            </OnPlatform>
+        </ContentView>
+    </ContentPage.Content>
+</ContentPage>

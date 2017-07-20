@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    BackgroundColor="#fafafa"
+    xmlns:i18n="clr-namespace:ibanking" xmlns:controls="clr-namespace:ibanking.Controls" Title="{i18n:Translate L_HISTORICO}" x:Class="ibanking.HistoricoList.Historicolist">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Frame CornerRadius="0" HasShadow="true" BackgroundColor="#f0f0f0">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Label Text="{i18n:Translate L_BALANCE}">
+                    </Label>
+                    <Label FontSize="18" FontAttributes="Bold" Text="{Binding Historico.Balance, StringFormat='{0:C}'}">
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <controls:Movimientos Group="true" ListMovimientos="{Binding Historico.Movimientos}" MostrarConcepto="{Binding Historico.Mostrar_Concepto}">
+            </controls:Movimientos>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

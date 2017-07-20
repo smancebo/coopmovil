@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    HorizontalOptions="FillAndExpand" VerticalOptions="Start" 
+    xmlns:cs="clr-namespace:ibanking.Controls;assembly=ibanking" 
+    xmlns:i18n="clr-namespace:ibanking"
+    x:Class="ibanking.Controls.Resumen.Certificado">
+
+     <Grid.ColumnDefinitions>
+        <ColumnDefinition Width='1*'></ColumnDefinition>
+        <ColumnDefinition Width='4*'></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height='1'></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <cs:IconLabel Grid.Row='0' Grid.Column='0' HorizontalOptions="Center" 
+        Style="{DynamicResource icon-container}"
+    VerticalOptions="Center">&#xf022;</cs:IconLabel>
+    <StackLayout  Padding="0, 0, 15, 0" Grid.Row='0' Grid.Column='1' HorizontalOptions="FillAndExpand" Orientation='Vertical'>
+        <Label x:Name='lblDescription' Style="{DynamicResource head-label}">1234</Label>
+
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation='Horizontal'>
+            <Label Text="{i18n:Translate L_CERTIFICADO}" HorizontalOptions='FillAndExpand'></Label>
+            <Label x:Name='lblCertificado' HorizontalOptions='Fill' Style="{DynamicResource head-label}">123</Label>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions='FillAndExpand' Orientation='Horizontal'>
+            <Label Text="{i18n:Translate L_MONTO}" HorizontalOptions='FillAndExpand'></Label>
+            <Label x:Name='lblMonto' HorizontalOptions='Fill' Style='{DynamicResource amount-label}'>123</Label>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions='FillAndExpand' Orientation='Horizontal'>
+            <Label Text="{i18n:Translate L_BALANCE}" HorizontalOptions='FillAndExpand'></Label>
+            <Label x:Name='lblBalance' HorizontalOptions='Fill' Style='{DynamicResource amount-label}'>123</Label>
+        </StackLayout>
+
+    </StackLayout>
+    <BoxView BackgroundColor="#ddd" Grid.Row="1" Grid.ColumnSpan="2"></BoxView>
+</Grid>

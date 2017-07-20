@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" 
+    xmlns:controls="clr-namespace:ibanking.Controls"
+    Title="{i18n:Translate L_DETALLE_PRESTAMO}" BackgroundColor="#fafafa" x:Class="ibanking.DetallePrestamo.detalle_prestamo">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="10, 40, 10, 20" Android="10, 20, 10, 20">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout IsVisible="{Binding ShowPrestamo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout x:Name="prestamo" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*">
+                            </RowDefinition>
+                            <RowDefinition Height="*">
+                            </RowDefinition>
+                            <RowDefinition Height="*">
+                            </RowDefinition>
+                            <RowDefinition Height="*">
+                            </RowDefinition>
+                            <RowDefinition Height="*">
+                            </RowDefinition>
+                            <RowDefinition Height="*">
+                            </RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*">
+                            </ColumnDefinition>
+                            <ColumnDefinition Width="1*">
+                            </ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_BALANCE_ACTUAL}">
+                            </Label>
+                            <Entry Text="{Binding BALANCE_PRESTAMO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate VALOR_CUOTA}">
+                            </Label>
+                            <Entry Text="{Binding VALOR_CUOTA, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_INTERES_VIGENTE}">
+                            </Label>
+                            <Entry Text="{Binding INTERESES_VIGENTES, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_FECHA_PROXIMO_PAGO}">
+                            </Label>
+                            <Entry Text="{Binding FECHA_PROXIMO_CAPITAL, StringFormat='{}{0:dd-MM-yyyy}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_CAPITAL_VENCIDO}">
+                            </Label>
+                            <Entry Text="{Binding CAPITAL_VENCIDO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text-red}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_INTERES_VENCIDO}">
+                            </Label>
+                            <Entry Text="{Binding INTERES_VENCIDO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text-red}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_SEGURO}">
+                            </Label>
+                            <Entry Text="{Binding SEGURO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text-red}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="3" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_MORA}">
+                            </Label>
+                            <Entry Text="{Binding MORA, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text-red}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="4" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_CARGOS}">
+                            </Label>
+                            <Entry Text="{Binding BALANCE_CARGO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text-red}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="4" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_SALDO_A_FAVOR}">
+                            </Label>
+                            <Entry Text="{Binding MONTO_PAGO_ANTICIPADO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="5" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_TOTAL_VENCIDO}">
+                            </Label>
+                            <Entry Text="{Binding TOTAL_VENCIDO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text-red}">
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Grid.Row="5" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <Label Text="{i18n:Translate L_TOTAL_ADEUDADO}">
+                            </Label>
+                            <Entry Text="{Binding TOTAL_DEUDA, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                            </Entry>
+                        </StackLayout>
+                    </Grid>
+                    <StackLayout x:Name="viewMore" Orientation="Vertical" HorizontalOptions="FillAndExpand" IsVisible="false">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*">
+                                </RowDefinition>
+                                <RowDefinition Height="*">
+                                </RowDefinition>
+                                <RowDefinition Height="*">
+                                </RowDefinition>
+                                <RowDefinition Height="*">
+                                </RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*">
+                                </ColumnDefinition>
+                                <ColumnDefinition Width="1*">
+                                </ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                                <Label Text="{i18n:Translate L_MONTO_PRESTAMO}">
+                                </Label>
+                                <Entry Text="{Binding MONTO_PRESTAMO, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                                </Entry>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                                <Label Text="{i18n:Translate L_FECHA_PRESTAMO}">
+                                </Label>
+                                <Entry Text="{Binding FECHA_PRESTAMO, StringFormat='{}{0:dd-MM-yyyy}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                                </Entry>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                                <Label Text="{i18n:Translate L_TASA_INTERES}">
+                                </Label>
+                                <Entry Text="{Binding TASA_INTERES, StringFormat='{0:N2}%'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                                </Entry>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                                <Label Text="{i18n:Translate L_NUMERO_PAGOS}">
+                                </Label>
+                                <Entry Text="{Binding PLAZO}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                                </Entry>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
+                                <Label Text="{i18n:Translate L_TIPO_CUOTA}">
+                                </Label>
+                                <Entry Text="{Binding TIPO_CUOTA, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                                </Entry>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
+                                <Label Text="{i18n:Translate L_SUCURSAL_PRESTAMO}">
+                                </Label>
+                                <Entry Text="{Binding SUCURSAL, StringFormat='{0:C}'}" InputTransparent="true" Style="{DynamicResource content-details-text}">
+                                </Entry>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                    <Button x:Name="btnViewMore" Text="{i18n:Translate L_VER_MAS}" Clicked="VerMas_Clicked">
+                    </Button>
+                    <controls:Movimientos ListMovimientos="{Binding MOVIMIENTOS}"
+                        Tipo="pr"
+                        MostrarConcepto="false">
+                    </controls:Movimientos>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

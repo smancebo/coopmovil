@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" x:Class="ibanking.Utils.ChooseTarjeta">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="20, 40, 20,20" Android="10, 20, 10, 20">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <SearchBar x:Name="searchBar" Placeholder="{i18n:Translate L_BUSCAR}" TextChanged="OnSearchBar_TextChanged" HorizontalOptions="FillAndExpand">
+                </SearchBar>
+            </StackLayout>
+            <ListView x:Name="lstCuentas" RowHeight="140" ItemSelected="lstCuenta_ItemSelected" ItemsSource="{Binding Items}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                                <Label Text="{i18n:Translate L_TARJETA}" Style="{DynamicResource head-label}">
+                                </Label>
+                                <Label Text="{Binding T_Tarjeta_Nombre_Titular}" Style="{DynamicResource head-label}">
+                                </Label>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Label Text="{i18n:Translate L_CARD_NUMBER}" HorizontalOptions="FillAndExpand">
+                                    </Label>
+                                    <Label Text="{Binding tarjetaEncriptada}" Style="{DynamicResource head-label}">
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

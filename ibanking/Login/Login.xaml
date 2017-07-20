@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" Title="{i18n:Translate L_LOGIN}" x:Class="ibanking.Login.Login">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="10, 40, 10, 20" Android="10, 20, 10, 20">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand" >
+            <Frame HorizontalOptions="FillAndExpand" Margin="5" VerticalOptions="Start" >
+                <StackLayout x:Name="main" HorizontalOptions="FillAndExpand" Orientation="Vertical" >
+                    <Image x:Name="imgLogo">
+                    </Image>
+                    <Label x:Name="lblUser" Text="{i18n:Translate L_USUARIO}">
+                    </Label>
+                    <Entry x:Name="txtUsername" HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222">
+                    </Entry>
+                    <Label x:Name="lblPassword" Text="{i18n:Translate L_PASSWORD}">
+                    </Label>
+                    <Entry x:Name="txtPassword" IsPassword="true" HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222">
+                    </Entry>
+                    <Button x:Name="ButtonLogin" Text="{i18n:Translate L_INICIAR_SESION}">
+                    </Button>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
