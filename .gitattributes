@@ -1,1 +1,17 @@
 .gitattributes merge=ours
+iOS/Assets.xcassets/ merge=ours
+iOS/Info.plist merge=ours
+iOS/iTunesArtwork merge=ours
+iOS/iTunesArtwork@2x merge=ours
+iOS/Entitlements.plist merge=ours
+iOS/AppDelegate.cs merge=ours
+iOS/Resources/ merge=ours
+iOS/Main.cs merge=ours
+iOS/LaunchScreen.storyboard merge=ours
+Droid/MainActivity.cs merge=ours
+Droid/Resources/ merge=ours
+Droid/Properties/ merge=ours
+Droid/Assets/ merge=ours
+ibanking/App.xaml merge=ours
+ibanking/lang merge=ours
+ibanking/Services/Config.cs merge=ours
