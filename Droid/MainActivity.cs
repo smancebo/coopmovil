@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 
 using Android.App;
 using Android.Content;
@@ -12,7 +12,7 @@ using Refractored.XamForms.PullToRefresh.Droid;
 
 namespace ibanking.Droid
 {
-    [Activity(Label = "ibanking.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
