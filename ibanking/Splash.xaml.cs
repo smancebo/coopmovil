@@ -20,26 +20,34 @@ namespace ibanking
             {
 				var inst = await GetDatosInst();
 				Models.Shared.Institucion = inst;
-                var coopinfo = new NavigationPage(new CoopInfo());
-
-                //coopinfo.
-
-                await Task.Run(async () =>
+                if (inst.MSG != "")
                 {
-                    await Task.Delay(300);
-                    Device.BeginInvokeOnMainThread(() =>
-                    {
-                        Application.Current.MainPage = coopinfo;
-                    });
 
-                });
+
+                    var coopinfo = new NavigationPage(new CoopInfo());
+
+                    //coopinfo.
+
+                    await Task.Run(async () =>
+                    {
+                        await Task.Delay(300);
+                        Device.BeginInvokeOnMainThread(() =>
+                        {
+                            Application.Current.MainPage = coopinfo;
+                        });
+
+                    });
+                }else
+                {
+                    await DisplayAlert("", inst.MSG, i18n.getString("L_ACEPTAR"));
+                }
 
 
 				
             }else{
-                await DisplayAlert(Strings.strings.noConnection,
-                                   Strings.strings.noConnectionError,
-                                   Strings.strings.Ok);
+                await DisplayAlert(i18n.getString("L_ERROR_CONEXION"),
+                                   i18n.getString("L_COOPMOVIL_OFFLINE"),
+                                   i18n.getString("L_ACEPTAR"));
 
             }
 			
