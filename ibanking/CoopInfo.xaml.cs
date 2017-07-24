@@ -18,8 +18,8 @@ namespace ibanking
 
 
             LabelFecha.Text = DateTime.Now.ToString("dd MMM yyyy");
-            ImageLogo.Source = Shared.Institucion.Logo;
-            ImageBanner.Source = Shared.Institucion.Banner;
+            ImageLogo.Source = Shared.Institucion.LOGO;
+            ImageBanner.Source = Shared.Institucion.BANNER;
 
             ButtonAcceso.Tapped = OnAccesoTap;
             ButtonOtherInfo.Tapped = OnOtherInfoTap;

@@ -7,24 +7,24 @@ namespace ibanking.Models
 {
     public class Institucion
     {
-        public string Nombre { get; set; }
-        public ImageSource Logo { get; set; }
-        public ImageSource Banner { get; set; }
-        public bool Transferencia { get; set; }
-        public bool Pago { get; set; }
-        public bool Desembolso { get; set; }
-        public bool BloqueoTd {get;set;}
+        public string NOMBRE { get; set; }
+        public ImageSource LOGO { get; set; }
+        public ImageSource BANNER { get; set; }
+        public bool TRANSFERENCIA { get; set; }
+        public bool PAGO { get; set; }
+        public bool DESEMBOLSO { get; set; }
+        public bool BLOQUEOTD {get;set;}
         public string MSG { get; set; }
 
         public Institucion()
         {
-            this.Nombre = "";
-            this.Logo = null;
-            this.Banner = null;
-            this.Transferencia = false;
-            this.Pago = false;
-            this.Desembolso = false;
-            this.BloqueoTd = false;
+            this.NOMBRE = "";
+            this.LOGO = null;
+            this.BANNER = null;
+            this.TRANSFERENCIA = false;
+            this.PAGO = false;
+            this.DESEMBOLSO = false;
+            this.BLOQUEOTD = false;
             this.MSG = "";
         }
 

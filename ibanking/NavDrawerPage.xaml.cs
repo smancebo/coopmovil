@@ -31,20 +31,20 @@ namespace ibanking
             menuList.Add(historico);
 
 
-            if(Models.Shared.Institucion.Transferencia)
+            if(Models.Shared.Institucion.TRANSFERENCIA)
             {
                 menuList.Add(transferencia);
             }
 
-            if(Models.Shared.Institucion.Pago)
+            if(Models.Shared.Institucion.PAGO)
             {
                 menuList.Add(pago);
             }
-            if(Models.Shared.Institucion.Desembolso)
+            if(Models.Shared.Institucion.DESEMBOLSO)
             {
                 menuList.Add(desembolso);
             }
-            if(Models.Shared.Institucion.BloqueoTd)
+            if(Models.Shared.Institucion.BLOQUEOTD)
             {
 				menuList.Add(bloqueoTc);
             }

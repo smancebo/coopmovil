@@ -16,7 +16,7 @@ namespace ibanking.Login
 			InitializeComponent();
 			//Strings.strings.Culture = new System.Globalization.CultureInfo("en-US");
 			
-			imgLogo.Source = ibanking.Models.Shared.Institucion.Logo;
+            imgLogo.Source = ibanking.Models.Shared.Institucion.LOGO;
             txtUsername.Completed += (sender, e) => {
                 txtPassword.Focus();
             };
