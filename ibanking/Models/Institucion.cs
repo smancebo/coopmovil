@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿﻿﻿using System;
 using Newtonsoft.Json.Linq;
 using Xamarin.Forms;
 using System.IO;
@@ -29,19 +29,29 @@ namespace ibanking.Models
         }
 
         public static Institucion FromJToken(JToken obj){
-            return obj.ToObject<Models.Institucion>();
-            //return new Institucion()
-            //{
-            //    Nombre = obj["NOMBRE"].Value<string>(),
-            //    Logo = ImageSourceFromBase64(obj["LOGO"].Value<string>()),
-            //    Banner = ImageSourceFromBase64(obj["BANNER"].Value<string>()),
-				
-            //    Transferencia = Boolean.Parse(obj["TRANSFERENCIA"].Value<string>()),
-            //    Pago = Boolean.Parse(obj["PAGO"].Value<string>()),
-            //    Desembolso = Boolean.Parse(obj["DESEMBOLSO"].Value<string>()),
-            //    BloqueoTd = Boolean.Parse(obj["BLOQUEOTD"].Value<string>())
-            //};
-        }
+			var msg = obj.Value<string>("MSG") ?? "";
+			if (msg != "")
+			{
+				return new Institucion()
+				{
+					MSG = obj["MSG"].Value<string>()
+				};
+			}
+			else
+			{
+				return new Institucion()
+				{
+					NOMBRE = obj["NOMBRE"].Value<string>(),
+					LOGO = ImageSourceFromBase64(obj["LOGO"].Value<string>()),
+					BANNER = ImageSourceFromBase64(obj["BANNER"].Value<string>()),
+					TRANSFERENCIA = Boolean.Parse(obj["TRANSFERENCIA"].Value<string>()),
+					PAGO = Boolean.Parse(obj["PAGO"].Value<string>()),
+					DESEMBOLSO = Boolean.Parse(obj["DESEMBOLSO"].Value<string>()),
+					BLOQUEOTD = Boolean.Parse(obj["BLOQUEOTD"].Value<string>())
+				};
+			}
+			//return obj.ToObject<Models.Institucion>();
+		}
 
         static ImageSource ImageSourceFromBase64(string base64){
             return ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(base64)));
