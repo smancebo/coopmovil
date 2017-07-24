@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ibanking.Services;
@@ -20,7 +20,7 @@ namespace ibanking
             {
 				var inst = await GetDatosInst();
 				Models.Shared.Institucion = inst;
-                if (inst.MSG != "")
+                if (inst.MSG == "") // no error from service
                 {
 
 
