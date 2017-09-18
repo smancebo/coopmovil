@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundColor="#fafafa" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:i18n="clr-namespace:ibanking" Title="{i18n:Translate L_SOLICITUD_REGISTRO}" x:Class="ibanking.Registro.Registro">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 0, 0, 20" Android="10, 20, 10, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Frame HasShadow="false">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Picker ItemsSource="{Binding Documentos}" HorizontalOptions="FillAndExpand">
+                        </Picker>
+                        <Entry x:Name="txtDocumento" Text="{Binding Documento}" HorizontalOptions="FillAndExpand">
+                        </Entry>
+                    </StackLayout>
+                    <Label Text="{i18n:Translate L_TELEFONO}">
+                    </Label>
+                    <Entry Text="{Binding Telefono}" HorizontalOptions="FillAndExpand">
+                    </Entry>
+                    <Label Text="{i18n:Translate L_EMAIL}">
+                    </Label>
+                    <Entry Text="{Binding Email}" HorizontalOptions="FillAndExpand">
+                    </Entry>
+                </StackLayout>
+            </Frame>
+            <Frame HasShadow="false">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{i18n:Translate L_USUARIO}"></Label>
+                    <Entry Text="{Binding UserName}" HorizontalOptions="FillAndExpand"></Entry>
+                    <Label Text="{i18n:Translate L_PREGUNTA_SEGURIDAD}"></Label>
+                    <Picker ItemsSource="{Binding Preguntas}" HorizontalOptions="FillAndExpand"></Picker>
+                    <Label Text="{i18n:Translate L_RESPUESTA}"></Label>
+                    <Entry Text="{Binding Respuesta}"></Entry>
+                </StackLayout>
+            </Frame>
+            <Frame HasShadow="false">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Label Text="{i18n:Translate L_COMO_SE_ENTERO_SERVICIO}"></Label>
+                    <Picker ItemsSource="{Binding Canales}" HorizontalOptions="FillAndExpand"></Picker>
+                    <Entry x:Name="txtOtros" HorizontalOptions="FillAndExpand"></Entry>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

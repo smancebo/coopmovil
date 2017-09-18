@@ -129,7 +129,14 @@
   "L_USUARIO_CONTRASENA_REQUERIDA": "Nombre de Usuario y contraseña son requeridos",
   "L_OK": "OK",
   "L_CERRAR": "Cerrar",
-  "L_FECHA" :  "Fecha"
-
+  "L_FECHA": "Fecha",
+  "L_REGISTRATE": "Registrate",
+  "L_OR": "O",
+  "L_SOLICITUD_REGISTRO": "Solicitud de Registro",
+  "L_TELEFONO": "Teléfono",
+  "L_EMAIL": "E-Mail",
+  "L_PREGUNTA_SEGURIDAD": "Pregunta de Seguridad",
+  "L_RESPUESTA": "Respuesta",
+  "L_COMO_SE_ENTERO_SERVICIO": "Como se entero de nuestro servicio"
 
  }

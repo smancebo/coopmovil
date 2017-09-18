@@ -62,6 +62,11 @@ namespace ibanking.Login
 
 			};
 
+            ButtonRegister.Clicked += (sender, e) =>
+            {
+	            Navigation.PushAsync(new Registro.Registro());
+            };
+
 		}
 	}
 }

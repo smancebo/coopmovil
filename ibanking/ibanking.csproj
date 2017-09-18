@@ -130,6 +130,9 @@
     <EmbeddedResource Include="OtherInfo\OtherInfo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registro\Registro.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -293,6 +296,12 @@
       <DependentUpon>OtherInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="IVersionGet.cs" />
+    <Compile Include="Registro\Registro.xaml.cs">
+      <DependentUpon>Registro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroVM.cs" />
+    <Compile Include="Registro\RegistroService.cs" />
+    <Compile Include="Models\Documento.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -351,6 +360,7 @@
     <Folder Include="BloqueoTarjetas\" />
     <Folder Include="Configuracion\" />
     <Folder Include="OtherInfo\" />
+    <Folder Include="Registro\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
