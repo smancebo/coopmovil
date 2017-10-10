@@ -14,6 +14,24 @@ namespace ibanking.Login
 		{
 
 			InitializeComponent();
+            ToolbarItems.Add(new ToolbarItem()
+            {
+                Text = i18n.getString("L_REGISTRATE"),
+                Order = ToolbarItemOrder.Primary,
+                Command = new Command((obj) =>
+                {
+                    Navigation.PushAsync(new Registro.Registro());
+                })
+            });
+            ToolbarItems.Add(new ToolbarItem()
+            {
+                Text = i18n.getString("L_RECUPERAR_CLAVE"),
+                Order = ToolbarItemOrder.Secondary,
+                Command = new Command((obj) =>
+                {
+                    Navigation.PushAsync(new Registro.Registro());
+                })
+            });
 			//Strings.strings.Culture = new System.Globalization.CultureInfo("en-US");
 			
             imgLogo.Source = ibanking.Models.Shared.Institucion.LOGO;
@@ -61,12 +79,6 @@ namespace ibanking.Login
 				
 
 			};
-
-            ButtonRegister.Clicked += (sender, e) =>
-            {
-	            Navigation.PushAsync(new Registro.Registro());
-            };
-
 		}
 	}
 }

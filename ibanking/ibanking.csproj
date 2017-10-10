@@ -302,6 +302,8 @@
     <Compile Include="Registro\RegistroVM.cs" />
     <Compile Include="Registro\RegistroService.cs" />
     <Compile Include="Models\Documento.cs" />
+    <Compile Include="Models\Registro.cs" />
+    <Compile Include="Models\ServiceResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

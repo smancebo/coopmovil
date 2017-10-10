@@ -22,6 +22,7 @@ namespace ibanking.Services
                 //    UseProxy = true
                 //};
 				using (var client = new HttpClient(new NativeMessageHandler()))
+                //using (var client = new HttpClient())    
 				{
 					var content = new StringContent(soapString, Encoding.UTF8, "application/soap+xml");
 

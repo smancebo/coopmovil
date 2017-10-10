@@ -6,14 +6,18 @@ namespace ibanking.Models
     public class Documento
     {
         public string ID { get; set; }
-        public string Descripcion { get; set; }
+        public string DESCRIPCION { get; set; }
 
         public Documento()
         {
             this.ID = "";
-            this.Descripcion = "";
+            this.DESCRIPCION = "";
         }
 
+        public override string ToString()
+        {
+            return this.DESCRIPCION;
+        }
 
     }
 }

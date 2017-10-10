@@ -137,6 +137,11 @@
   "L_EMAIL": "E-Mail",
   "L_PREGUNTA_SEGURIDAD": "Pregunta de Seguridad",
   "L_RESPUESTA": "Respuesta",
-  "L_COMO_SE_ENTERO_SERVICIO": "Como se entero de nuestro servicio"
+  "L_COMO_SE_ENTERO_SERVICIO": "Como se entero de nuestro servicio",
+  "L_REGISTRAR": "Registrar",
+  "L_SELECCIONE": "Seleccione",
+  "L_DOCUMENTO": "Documento",
+  "L_ESPECIFIQUE": "Especifíque",
+  "L_RECUPERAR_CLAVE": "Olvidó Contraseña"
 
  }

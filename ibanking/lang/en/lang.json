@@ -127,5 +127,18 @@
   "L_CONFIRM_EXIT": "You are about to quick, are you sure?",
   "L_OK": "Done",
   "L_CERRAR": "Close",
-  "L_FECHA": "Date"
+  "L_FECHA": "Date",
+  "L_REGISTRATE": "Registration",
+  "L_OR": "Or",
+  "L_SOLICITUD_REGISTRO": "Registration Request",
+  "L_TELEFONO": "Phone",
+  "L_EMAIL": "Email",
+  "L_PREGUNTA_SEGURIDAD": "Security Question",
+  "L_RESPUESTA": "Answer",
+  "L_COMO_SE_ENTERO_SERVICIO": "How do you know about our service",
+  "L_REGISTRAR": "Register",
+  "L_SELECCIONE" "Choose",
+  "L_DOCUMENTO": "Document",
+  "L_ESPECIFIQUE": "Specify",
+  "L_RECUPERAR_CLAVE" : "Forgot Password"
  }

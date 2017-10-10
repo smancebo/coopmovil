@@ -20,9 +20,7 @@
                     </Entry>
                     <Button x:Name="ButtonLogin" Text="{i18n:Translate L_INICIAR_SESION}">
                     </Button>
-                    <Label Text="{i18n:Translate L_OR}">
-                    </Label>
-                    <Button x:Name="ButtonRegister" Text="{i18n:Translate L_REGISTRATE}"></Button>
+
                     
                 </StackLayout>
             </Frame>
