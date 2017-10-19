@@ -142,6 +142,14 @@
   "L_SELECCIONE": "Seleccione",
   "L_DOCUMENTO": "Documento",
   "L_ESPECIFIQUE": "Especifíque",
-  "L_RECUPERAR_CLAVE": "Olvidó Contraseña"
+  "L_RECUPERAR_CLAVE": "Recuperar Contraseña",
+  "L_CAMBIO_CLAVE": "Cambiar Contraseña",
+  "L_CLAVE_NOT_EQ": "Campos de Contraseña no coinciden",
+  "L_CLAVE_ANT": "Contraseña Anterior",
+  "L_CLAVE_NUEVA": "Contraseña Nueva",
+  "L_CONF_CLAVE_NUEVA": "Confirmar Contraseña",
+  "L_TIPO_DOCUMENTO" :  "Tipo Documento",
+  "L_DOCUMENTO_IDENTIDAD" :  "Documento de Identidad",
+  "L_CONTINUAR" :  "Continuar"
 
  }

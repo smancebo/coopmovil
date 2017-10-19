@@ -6,48 +6,52 @@
     </ContentPage.Padding>
     <ContentPage.Content>
         <ContentView>
-            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <ScrollView HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <Label Text="{i18n:Translate L_DOCUMENTO}">
-                    </Label>
-                    <Picker ItemsSource="{Binding ListaDocumentos.ListaTiposDocumento}" Title="{i18n:Translate L_SELECCIONE}" SelectedItem="{Binding vm.TipoDocumento}" HorizontalOptions="FillAndExpand">
-                    </Picker>
-                    <Entry x:Name="txtDocumento" Text="{Binding vm.Documento}" HorizontalOptions="FillAndExpand">
-                    </Entry>
-                    <Label Text="{i18n:Translate L_TELEFONO}">
-                    </Label>
-                    <Entry Text="{Binding vm.Telefono}" Keyboard="Telephone" HorizontalOptions="FillAndExpand">
-                    </Entry>
-                    <Label Text="{i18n:Translate L_EMAIL}">
-                    </Label>
-                    <Entry Text="{Binding vm.Email}" Keyboard="Email" HorizontalOptions="FillAndExpand">
-                    </Entry>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate L_TIPO_DOCUMENTO}">
+                        </Label>
+                        <Picker ItemsSource="{Binding ListaDocumentos.ListaTiposDocumento}" Title="{i18n:Translate L_SELECCIONE}" SelectedItem="{Binding vm.TipoDocumento}" HorizontalOptions="FillAndExpand">
+                        </Picker>
+                        <Label Text="{i18n:Translate L_DOCUMENTO}">
+                        </Label>
+                        <Entry x:Name="txtDocumento" Text="{Binding vm.Documento}" HorizontalOptions="FillAndExpand">
+                        </Entry>
+                        <Label Text="{i18n:Translate L_TELEFONO}">
+                        </Label>
+                        <Entry Text="{Binding vm.Telefono}" Keyboard="Telephone" HorizontalOptions="FillAndExpand">
+                        </Entry>
+                        <Label Text="{i18n:Translate L_EMAIL}">
+                        </Label>
+                        <Entry Text="{Binding vm.Email}" Keyboard="Email" HorizontalOptions="FillAndExpand">
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{i18n:Translate L_USUARIO}">
+                        </Label>
+                        <Entry Text="{Binding vm.UserName}" HorizontalOptions="FillAndExpand">
+                        </Entry>
+                        <Label Text="{i18n:Translate L_PREGUNTA_SEGURIDAD}">
+                        </Label>
+                        <Picker ItemsSource="{Binding ListaDocumentos.ListaPreguntasSecreta}" Title="{i18n:Translate L_SELECCIONE}" SelectedItem="{Binding vm.Pregunta}" HorizontalOptions="FillAndExpand">
+                        </Picker>
+                        <Label Text="{i18n:Translate L_RESPUESTA}">
+                        </Label>
+                        <Entry Text="{Binding vm.Respuesta}">
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                        <Label Text="{i18n:Translate L_COMO_SE_ENTERO_SERVICIO}">
+                        </Label>
+                        <Picker ItemsSource="{Binding ListaDocumentos.ListaComoSeEntero}" Title="{i18n:Translate L_SELECCIONE}" SelectedIndexChanged="Handle_SelectedIndexChanged" SelectedItem="{Binding vm.ComoSeEntero}" HorizontalOptions="FillAndExpand">
+                        </Picker>
+                        <Entry x:Name="txtOtros" IsVisible="false" Placeholder="{i18n:Translate L_ESPECIFIQUE}" HorizontalOptions="FillAndExpand" Text="{Binding vm.ComoSeEnteroOtro}">
+                        </Entry>
+                    </StackLayout>
+                    <Button HorizontalOptions="FillAndExpand" Clicked="BtnRegistro_Clicked" Text="{i18n:Translate L_REGISTRAR}">
+                    </Button>
                 </StackLayout>
-                <StackLayout Orientation="Vertical">
-                    <Label Text="{i18n:Translate L_USUARIO}">
-                    </Label>
-                    <Entry Text="{Binding vm.UserName}" HorizontalOptions="FillAndExpand">
-                    </Entry>
-                    <Label Text="{i18n:Translate L_PREGUNTA_SEGURIDAD}">
-                    </Label>
-                    <Picker ItemsSource="{Binding ListaDocumentos.ListaPreguntasSecreta}" Title="{i18n:Translate L_SELECCIONE}" SelectedItem="{Binding vm.Pregunta}" HorizontalOptions="FillAndExpand">
-                    </Picker>
-                    <Label Text="{i18n:Translate L_RESPUESTA}">
-                    </Label>
-                    <Entry Text="{Binding vm.Respuesta}">
-                    </Entry>
-                </StackLayout>
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
-                    <Label Text="{i18n:Translate L_COMO_SE_ENTERO_SERVICIO}">
-                    </Label>
-                    <Picker ItemsSource="{Binding ListaDocumentos.ListaComoSeEntero}" Title="{i18n:Translate L_SELECCIONE}" SelectedIndexChanged="Handle_SelectedIndexChanged" SelectedItem="{Binding vm.ComoSeEntero}" HorizontalOptions="FillAndExpand">
-                    </Picker>
-                    <Entry x:Name="txtOtros" IsVisible="false" Placeholder="{i18n:Translate L_ESPECIFIQUE}" HorizontalOptions="FillAndExpand" Text="{Binding vm.ComoSeEnteroOtro}">
-                    </Entry>
-                </StackLayout>
-                <Button HorizontalOptions="FillAndExpand" Clicked="BtnRegistro_Clicked" Text="{i18n:Translate L_REGISTRAR}">
-                </Button>
-            </StackLayout>
+            </ScrollView>
         </ContentView>
     </ContentPage.Content>
 </ContentPage>

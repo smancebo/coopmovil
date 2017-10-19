@@ -12,6 +12,7 @@ namespace ibanking.Models
         public string DOC_IDENTIFICACION { get; set; }
         public string NOMBRE { get; set; }
         public string EMAIL { get; set; }
+        public bool CAMBIAR_CLAVE { get; set; }
 
 
 
@@ -22,6 +23,7 @@ namespace ibanking.Models
             this.DOC_IDENTIFICACION = "";
             this.NOMBRE = "";
             this.EMAIL = "";
+            this.CAMBIAR_CLAVE = false;
         }
 
         public static User FromJsonToken(JToken t){
@@ -37,7 +39,9 @@ namespace ibanking.Models
 					IDINSTITUCION = token["IDINSTITUCION"].Value<int>(),
 					DOC_IDENTIFICACION = token["DOC_IDENTIFICACION"].Value<string>(),
 					NOMBRE = token["NOMBRE"].Value<string>(),
-					EMAIL = token["EMAIL"].Value<string>()
+					EMAIL = token["EMAIL"].Value<string>(),
+                    CAMBIAR_CLAVE = token["CAMBIAR_CLAVE"].Value<bool>()
+                                          
 
 				};
             }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:i18n="clr-namespace:ibanking"
+    Title="{i18n:Translate L_RECUPERAR_CLAVE}"
+    x:Class="ibanking.OlvidoClave.RecuperarClave">
+	<ContentPage.Padding>
+          <OnPlatform x:TypeArguments="Thickness" iOS="10, 40, 10, 20" Android="10, 20, 10, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand" >
+            <Frame HorizontalOptions="FillAndExpand" Margin="5" VerticalOptions="Start" >
+                <StackLayout x:Name="main" HorizontalOptions="FillAndExpand" Orientation="Vertical" >
+                    <Label Text="{i18n:Translate L_PREGUNTA_SECRETA}">
+                    </Label>
+                    <Entry HorizontalOptions="FillAndExpand" IsPassword="true" BackgroundColor="#fff" TextColor="#222" Text="{Binding Pregunta}">>
+                    </Entry>
+                    <Label  Text="{i18n:Translate L_RESPUESTA}">
+                    </Label>
+                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222" Text="{Binding Respuesta}">
+                    </Entry>
+                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222" Text="{Binding eMail}">
+                    </Entry>
+                   
+                    <Button Text="{i18n:Translate L_CONTINUAR}" Clicked="Continuar_Clicked">
+                    </Button>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

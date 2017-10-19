@@ -57,11 +57,20 @@ namespace ibanking.Login
 					{
                         //var resumen = new NavigationPage(new Resumen.Resumen());
                         //Application.Current.MainPage = resumen;
+                        if (Models.Shared.User.CAMBIAR_CLAVE)
+                        {
+                            var cambiarClave = new CambioClave.CambioClave(txtUsername.Text);
+                            await Navigation.PushAsync(cambiarClave);
+                        }
+                        else
+                        {
 
-                        //await Navigation.PopToRootAsync(true);
-                        Models.Utils.ClearNavigationStack(Navigation);
-                        //await Navigation.PushAsync(new ibanking.NavDrawerPage(), true);
-                        Application.Current.MainPage = new NavDrawerPage();
+
+                            //await Navigation.PopToRootAsync(true);
+                            Models.Utils.ClearNavigationStack(Navigation);
+                            //await Navigation.PushAsync(new ibanking.NavDrawerPage(), true);
+                            Application.Current.MainPage = new NavDrawerPage();
+                        }
 					}
 					else
 					{
