@@ -9,7 +9,7 @@ namespace ibanking.Registro
     public static class RegistroService
     {
 
-        public static async Task<Models.Respuesta> RecuperarClaveMovil(string idUsuario, string respuesta, string eMail) {
+        public static async Task<Models.ServiceResponse> RecuperarClaveMovil(string idUsuario, string respuesta, string eMail) {
             var WebMethodParams = new Services.ApiParams();
 
             WebMethodParams.Add("idUsuario", idUsuario);
@@ -18,7 +18,7 @@ namespace ibanking.Registro
 
             var response = ((JArray)(await Services.APICaller.Call("RecuperarClaveMovil", WebMethodParams)));
 
-            return response.ElementAt(0).ToObject<Models.Respuesta>();
+            return response.ElementAt(0).ToObject<Models.ServiceResponse>();
 
         }
 
@@ -33,7 +33,7 @@ namespace ibanking.Registro
             return response.ElementAt(0).ToObject<Models.DatosRecuperarClave>();
         }
 
-        public static async Task<Models.Respuesta> CambiarClaveMovil(int idInst, 
+        public static async Task<Models.ServiceResponse> CambiarClaveMovil(int idInst, 
                                                                      string idUsuario, 
                                                                      string clave, 
                                                                      string ClaveNueva, 
@@ -49,7 +49,7 @@ namespace ibanking.Registro
 
             var response = ((JArray)(await Services.APICaller.Call("CambiarClaveMovil", webMethodParams)));
 
-            return response.ElementAt(0).ToObject<Models.Respuesta>();
+            return response.ElementAt(0).ToObject<Models.ServiceResponse>();
 
         }
 

@@ -20,6 +20,7 @@ namespace ibanking.OlvidoClave
         public OlvidoClave()
         {
             InitializeComponent();
+            this.Vm = new OlvidoClaveVm();
             this.BindingContext = this.Vm;
         }
 
@@ -34,6 +35,10 @@ namespace ibanking.OlvidoClave
                 return;
             }
 
+            var datos = await Registro.RegistroService.DatosRecuperarClaveMovil(this.Vm.Usuario, this.Vm.DocumentoIdentidad);
+
+            var recuperarClave = new RecuperarClave(datos);
+            await Navigation.PushAsync(recuperarClave);
 
         }
     }
