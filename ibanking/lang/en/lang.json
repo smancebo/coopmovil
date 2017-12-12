@@ -140,5 +140,23 @@
   "L_SELECCIONE" "Choose",
   "L_DOCUMENTO": "Document",
   "L_ESPECIFIQUE": "Specify",
-  "L_RECUPERAR_CLAVE" : "Forgot Password"
+  "L_RECUPERAR_CLAVE" : "Forgot Password",
+  "L_CAMBIO_CLAVE": "Change Password",
+  "L_CLAVE_NOT_EQ": "Passwords are not the same",
+  "L_CLAVE_ANT": "Old Password",
+  "L_CLAVE_NUEVA": "New Password",
+  "L_CONF_CLAVE_NUEVA": "Confirm Password",
+  "L_TIPO_DOCUMENTO": "Dococument Type",
+  "L_DOCUMENTO_IDENTIDAD": "Document Number",
+  "L_CONTINUAR": "Continue",
+  "L_PREGUNTA_SECRETA": "Secret Question",
+  "L_TIPO_DOCUMENTO_REQ": "Field 'Document Type' is required",
+  "L_DOCUMENTO_REQ": "Field 'Document' is required",
+  "L_TELEFONO_REQ": "Field 'Phone' is required",
+  "L_EMAIL_REQ": "Field 'Email' is required",
+  "L_USERNAME_REQ": "Field 'Username' is required",
+  "L_PREGUNTA_REQ": "Field 'Question' is required",
+  "L_RESPUESTA_REQ": "Field 'Answer' is required",
+  "L_COMO_SE_ENTERO_REQ": "Field 'How do you know about' is required"
+
  }

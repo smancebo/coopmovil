@@ -18,10 +18,18 @@
                     </Label>
                     <Entry x:Name="txtPassword" IsPassword="true" HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222">
                     </Entry>
-                    <Button x:Name="ButtonLogin" Text="{i18n:Translate L_INICIAR_SESION}">
-                    </Button>
 
-                    
+                    <Grid HorizontalOptions="CenterAndExpand">
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                         <Button Grid.Row="0" Grid.Column="0" x:Name="ButtonLogin" Text="{i18n:Translate L_INICIAR_SESION}">
+                        </Button>
+                        <Button Grid.Row="0" Grid.Column="1" x:Name="BtnRecuperarPassword" Text="{i18n:Translate L_RECUPERAR_CLAVE}">
+                        </Button>
+                    </Grid>
                 </StackLayout>
             </Frame>
         </ScrollView>

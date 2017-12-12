@@ -50,6 +50,57 @@ namespace ibanking.Registro
         async void BtnRegistro_Clicked (object sender, System.EventArgs e)
         {
             var msg = "";
+
+            if (this.vm.TipoDocumento.ID == "")
+            {
+                await DisplayAlert("", i18n.getString("L_TIPO_DOCUMENTO_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+            if (this.vm.Documento == "")
+            {
+                await DisplayAlert("", i18n.getString("L_DOCUMENTO_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+            if (this.vm.Telefono == "")
+            {
+                await DisplayAlert("", i18n.getString("L_TELEFONO_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+            if (this.vm.Email == "")
+            {
+                await DisplayAlert("", i18n.getString("L_EMAIL_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+            if (this.vm.UserName == "")
+            {
+                await DisplayAlert("", i18n.getString("L_USERNAME_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+            if (this.vm.Pregunta.ID == "")
+            {
+                await DisplayAlert("", i18n.getString("L_PREGUNTA_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+            if (this.vm.Respuesta == "")
+            {
+                await DisplayAlert("", i18n.getString("L_RESPUESTA_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+            if (this.vm.ComoSeEntero.ID == "")
+            {
+                await DisplayAlert("", i18n.getString("L_COMO_SE_ENTERO_REQ"), i18n.getString("L_OK"));
+                return;
+            }
+
+           
+
             try {
 				var response = await RegistroService.CrearAccesoMovil(Models.Shared.User.IDINSTITUCION,
 																  this.vm.TipoDocumento.ID,

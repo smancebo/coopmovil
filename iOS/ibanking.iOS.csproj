@@ -169,6 +169,7 @@
     <Compile Include="CustomEntryRenderer.cs" />
     <Compile Include="FileHelper.cs" />
     <Compile Include="GetVersionHelper.cs" />
+    <Compile Include="CustomFontNavigationPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splash.png" />

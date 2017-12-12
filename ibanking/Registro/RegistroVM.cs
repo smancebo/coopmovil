@@ -19,6 +19,7 @@ namespace ibanking.Registro
             this.Telefono = "";
             this.UserName = "";
             this.Respuesta = "";
+            this.Email = "";
             this.ComoSeEntero = new Models.Documento();
             this.TipoDocumento = new Models.Documento();
             this.Pregunta = new Models.Documento();

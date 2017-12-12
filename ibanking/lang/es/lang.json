@@ -150,6 +150,15 @@
   "L_CONF_CLAVE_NUEVA": "Confirmar Contraseña",
   "L_TIPO_DOCUMENTO" :  "Tipo Documento",
   "L_DOCUMENTO_IDENTIDAD" :  "Documento de Identidad",
-  "L_CONTINUAR" :  "Continuar"
+  "L_CONTINUAR" :  "Continuar",
+  "L_PREGUNTA_SECRETA" :  "Pregunta Secreta",
+  "L_TIPO_DOCUMENTO_REQ": "Campo 'Tipo Documento' es requerido",
+  "L_DOCUMENTO_REQ": "Campo 'Documento' es requerido",
+  "L_TELEFONO_REQ": "Campo 'Telefono' es requerido",
+  "L_EMAIL_REQ": "Campo 'Email' es requerido",
+  "L_USERNAME_REQ": "Campo 'Usuario' es requerido",
+  "L_PREGUNTA_REQ": "Campo 'Pregunta' es requerido",
+  "L_RESPUESTA_REQ": "Campo 'Respuesta' es requerido",
+  "L_COMO_SE_ENTERO_REQ": "Campo 'Como Se Entero' es requerido"
 
  }

@@ -13,13 +13,13 @@
                 <StackLayout x:Name="main" HorizontalOptions="FillAndExpand" Orientation="Vertical" >
                     <Label Text="{i18n:Translate L_PREGUNTA_SECRETA}">
                     </Label>
-                    <Entry HorizontalOptions="FillAndExpand" IsPassword="true" BackgroundColor="#fff" TextColor="#222" Text="{Binding Pregunta}">>
+                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#fff" InputTransparent="true" TextColor="#222" Text="{Binding PREGUNTA}">>
                     </Entry>
                     <Label  Text="{i18n:Translate L_RESPUESTA}">
                     </Label>
-                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222" Text="{Binding Respuesta}">
+                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222" Text="{Binding RESPUESTA}">
                     </Entry>
-                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222" Text="{Binding eMail}">
+                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#fff" TextColor="#222" InputTransparent="true" Text="{Binding EMAIL}">
                     </Entry>
                    
                     <Button Text="{i18n:Translate L_CONTINUAR}" Clicked="Continuar_Clicked">

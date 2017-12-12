@@ -8,6 +8,7 @@ namespace ibanking.Models
         public string PREGUNTA { get; set; }
         public string RESPUESTA { get; set; }
         public string EMAIL { get; set; }
+        public string USUARIO { get; set; }
 
         public DatosRecuperarClave()
         {
@@ -16,6 +17,7 @@ namespace ibanking.Models
             this.PREGUNTA = "";
             this.RESPUESTA = "";
             this.EMAIL = "";
+            this.USUARIO = "";
         }
     }
 }
