@@ -10,9 +10,9 @@
                 <OnPlatform x:TypeArguments='FileImageSource' iOS="hamburguer.png"></OnPlatform>
             </ContentPage.Icon>
 
-            <StackLayout Orientation="Vertical"  BackgroundColor="#008584">
+            <StackLayout Orientation="Vertical"  BackgroundColor="{StaticResource menuBgColor}">
 
-                <StackLayout HeightRequest="75" BackgroundColor="#008080" Padding="20, 40, 20, 10" Orientation="Vertical">
+                <StackLayout HeightRequest="75" BackgroundColor="{StaticResource menuTopColor}" Padding="20, 40, 20, 10" Orientation="Vertical">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
                         <Image Source="icon.png" HeightRequest="52" WidthRequest="52" HorizontalOptions="Fill"></Image>
                     </StackLayout>
@@ -21,7 +21,7 @@
 
                 <ListView x:Name='navigationDrawerList'
                     RowHeight="60"
-                    BackgroundColor="#008584"
+                    BackgroundColor="{StaticResource menuListColor}"
                     SeparatorVisibility="None"
 
                     ItemSelected="OnMenuItemSelected">
@@ -38,13 +38,13 @@
                                     Padding="20,10,0,10"
                                     Spacing="20">
                                     
-                                    <local:IconLabel TextColor="#fff" Text="{Binding Icon}" 
+                                    <local:IconLabel TextColor="{StaticResource menuIconColor}" Text="{Binding Icon}" 
                                     VerticalOptions="CenterAndExpand" FontSize="30">
                                     </local:IconLabel>
 
                                     <Label Text="{Binding Title}"
                                         FontSize="Medium" 
-                                        TextColor="#fff"
+                                        TextColor="{StaticResource menuTextColor}"
                                         VerticalOptions="Center">
                                     </Label>
                                 </StackLayout>

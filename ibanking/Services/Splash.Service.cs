@@ -8,14 +8,21 @@ namespace ibanking.Services
 {
     public static class Splash
     {
-        public static async Task<Institucion> GetDatosInstitucion(){
+        public static async Task<Institucion> GetDatosInstitucion()
+        {
+            try
+            {
+                var p = new ApiParams();
+                p.Add("version", Config.Version.Replace("v", ""));
 
-            var p = new ApiParams();
-            p.Add("version", Config.Version.Replace("v",""));
+                var datosInst = await APICaller.Call("DatosInstitucionMovil", p);
 
-            var datosInst = await APICaller.Call("DatosInstitucionMovil", p);
-
-            return Institucion.FromJToken(datosInst.Children().FirstOrDefault());
+                return Institucion.FromJToken(datosInst.Children().FirstOrDefault());
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

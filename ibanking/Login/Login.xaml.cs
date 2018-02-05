@@ -14,9 +14,27 @@ namespace ibanking.Login
 		{
 
 			InitializeComponent();
+            ToolbarItems.Add(new ToolbarItem()
+            {
+                Text = i18n.getString("L_REGISTRATE"),
+                Order = ToolbarItemOrder.Primary,
+                Command = new Command((obj) =>
+                {
+                    Navigation.PushAsync(new Registro.Registro());
+                })
+            });
+            //ToolbarItems.Add(new ToolbarItem()
+            //{
+            //    Text = i18n.getString("L_RECUPERAR_CLAVE"),
+            //    Order = ToolbarItemOrder.Secondary,
+            //    Command = new Command((obj) =>
+            //    {
+            //       
+            //    })
+            //});
 			//Strings.strings.Culture = new System.Globalization.CultureInfo("en-US");
 			
-			imgLogo.Source = ibanking.Models.Shared.Institucion.Logo;
+            imgLogo.Source = ibanking.Models.Shared.Institucion.LOGO;
             txtUsername.Completed += (sender, e) => {
                 txtPassword.Focus();
             };
@@ -25,7 +43,9 @@ namespace ibanking.Login
                 ButtonLogin.Focus();
             };
 
-
+            BtnRecuperarPassword.Clicked += async (sender, e) => {
+                await Navigation.PushAsync(new OlvidoClave.OlvidoClave());
+            };
 			ButtonLogin.Clicked += async (sender, e) =>
 			{
 
@@ -39,11 +59,20 @@ namespace ibanking.Login
 					{
                         //var resumen = new NavigationPage(new Resumen.Resumen());
                         //Application.Current.MainPage = resumen;
+                        if (Models.Shared.User.CAMBIAR_CLAVE)
+                        {
+                            var cambiarClave = new CambioClave.CambioClave(txtUsername.Text);
+                            await Navigation.PushAsync(cambiarClave);
+                        }
+                        else
+                        {
 
-                        //await Navigation.PopToRootAsync(true);
-                        Models.Utils.ClearNavigationStack(Navigation);
-                        //await Navigation.PushAsync(new ibanking.NavDrawerPage(), true);
-                        Application.Current.MainPage = new NavDrawerPage();
+
+                            //await Navigation.PopToRootAsync(true);
+                            Models.Utils.ClearNavigationStack(Navigation);
+                            //await Navigation.PushAsync(new ibanking.NavDrawerPage(), true);
+                            Application.Current.MainPage = new NavDrawerPage();
+                        }
 					}
 					else
 					{
@@ -61,7 +90,6 @@ namespace ibanking.Login
 				
 
 			};
-
 		}
 	}
 }

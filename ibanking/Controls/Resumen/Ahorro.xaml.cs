@@ -24,7 +24,7 @@ namespace ibanking.Controls.Resumen
             lblEstatus.Text = cuenta.Estatus;
             lblBalance.Text = cuenta.Balance_Actual.ToString("C");
             lblDisponible.Text = cuenta.Balance_Disponible.ToString("C");
-           
+            lblDescripcion.Text = cuenta.Nombre_Publico;
         }
     }
 }

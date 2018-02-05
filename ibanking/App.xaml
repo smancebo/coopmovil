@@ -8,7 +8,7 @@
 
             <Color x:Key="textColor">#fff</Color>
             <Color x:Key="backGroundColor">#00695C</Color>
-            
+
             
             <Style x:Key="primaryButton" TargetType="Button">
                 <Setter Property="TextColor" Value="{DynamicResource textColor}"></Setter>
@@ -58,6 +58,16 @@
                 <Setter Property="TextColor" Value="#C24133"></Setter>
                 <Setter Property="FontSize" Value="12"></Setter>
             </Style>
+
+            <Color x:Key="primaryColor">#00695C</Color>
+            <Color x:Key="menuBgColor">#008584</Color>
+            <Color x:Key="menuTopColor">#008080</Color>
+            <Color x:Key="menuIconColor">#fff</Color>
+            <Color x:Key="menuListColor">#008584</Color>
+            <Color x:Key="menuTextColor">#fff</Color>
+
+
+
         </ResourceDictionary>
 	</Application.Resources>
 </Application>
