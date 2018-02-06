@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.cosefi.coopmovil.cosefi</string>
+	<string>com.cosefi.coopmovil.coopbueno</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.2</string>
 	<key>CFBundleVersion</key>
@@ -42,6 +42,8 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>CFBundleName</key>
+	<string>COOPBUENO</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -57,7 +59,5 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>CFBundleName</key>
-	<string>COOPMOVIL</string>
 </dict>
 </plist>
