@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{4646E8D0-5ECC-41D8-9341-3B1DF01078E1}|Default">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="ibanking/Registro/RegistroService.cs" line="99" offsetX="661" offsetY="1313" expression="response" liveUpdate="False" />
+    <Watch file="../../../ibanking/Login/Login.service.cs" line="16" offsetX="856" offsetY="181" expression="password" liveUpdate="False" />
+    <Watch file="../../../ibanking/Login/Login.service.cs" line="15" offsetX="854" offsetY="147" expression="username" liveUpdate="False" />
+    <Watch file="../../../ibanking/Login/Login.service.cs" line="18" offsetX="856" offsetY="218" expression="userJson" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.ibanking.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MultiItemStartupConfigurations />
+</Properties>
